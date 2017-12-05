@@ -1,0 +1,99 @@
+{% extends 'master/../m_base.html' %}
+{% load static %}
+{% block title %}
+    <title>车次管理</title>
+{% endblock %}
+ {% block mainbody %}
+    <div class="main-wrap">
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font">
+            </i><a href="m_main.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">车次管理</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="#" method="post">
+                    <table class="search-tab">
+                        <td>
+                            <th width="120">起始城市:</th>
+                            <td>
+                                <select class="common-text required" name="star-city" id="">
+                                    <option value="">全部</option>
+                                    <option value="19">广州</option>
+                                    <option value="20">佛山</option>
+                                    <option value="19">深圳</option>
+                                    <option value="20">珠海</option>
+                                </select>
+                            </td>
+                            <th width="120">目的城市:</th>
+                            <td>
+                                <select class="common-text required" name="arrt-city" id="">
+                                    <option value="">全部</option>
+                                    <option value="19">广州</option>
+                                    <option value="20">佛山</option>
+                                    <option value="19">深圳</option>
+                                    <option value="20">珠海</option>
+                                </select>
+                            </td>
+                            <th width="120">发车时间:</th>
+                            <td><input class="common-text required" type="date"></td>
+                            <th width="120">
+                        <td ><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        <td ><input class="btn btn-primary btn2" name="sub" value="清除" type="reset"></td>
+                        </th>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post">
+                <div class="result-title">
+                    <div class="result-list">
+                        <a href="m_insert.html"><i class="icon-font"></i>新增班次</a>
+                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
+{#                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>#}
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
+                            <th>车次编号</th>
+                            <th>方向</th>
+                            <th>起始地</th>
+                            <th>目的地</th>
+                            <th>发车日期</th>
+                            <th>起始时间</th>
+                            <th>到达时间</th>
+                            <th>车牌号</th>
+                            <th>票价（元）</th>
+                            <th>总票</th>
+                            <th>余票</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                            <td title="车次"><a target="_blank" href="#" title="车次">GZ001</a></td>
+                            <td>广州-中山</td>
+                            <td>广州商学院</td>
+                            <td>坦洲</td>
+                            <td>2017-11-30</td>
+                            <td>12:00</td>
+                            <td>14:00</td>
+                            <td>粤A2314
+                            <td>60</td>
+                            <td>80</td>
+                            <td>80</td>
+                            <td>
+                                <a class="link-update" href="#">修改</a>
+                                <a class="link-del" href="#">删除</a>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="list-page">  1/1 页</div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

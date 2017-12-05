@@ -1,0 +1,70 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+{% block title %}
+    <title>后台管理</title>
+{% endblock %}
+{#    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">#}
+    <link rel="stylesheet" type="text/css" href="{% static 'css-master/common.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css-master/main.css' %}"/>
+    <script type="text/javascript" src="{% static 'js-master/modernizr.min.js' %}"></script>
+    {% block m_css %}
+    {% endblock %}
+</head>
+
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="m_main.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on" href="m_main.html">首页</a></li>
+                <li><a href="http://127.0.0.1:8000/u_main" target="_blank">网站首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="#">管理员</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单栏</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>常用操作</a>
+                    <ul class="sub-menu">
+                        <li><a href="m_checi.html"><i class="icon-font">&#xe008;</i>车次管理</a></li>
+                        <li><a href="m_route.html"><i class="icon-font">&#xe008;</i>线路管理</a></li>
+                        <li><a href="m_order.html"><i class="icon-font">&#xe005;</i>订单管理</a></li>
+                        <li><a href="m_inform.html"><i class="icon-font">&#xe004;</i>车讯管理</a></li>
+                        <li><a href="m_announce.html"><i class="icon-font">&#xe012;</i>公告管理</a></li>
+                        <li><a href="m_suggest.html"><i class="icon-font">&#xe052;</i>意见反馈</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>账号管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="#"><i class="icon-font">&#xe017;</i>个人中心</a></li>
+                        <li><a href="#"><i class="icon-font">&#xe037;</i>用户管理</a></li>
+{#                        <li><a href="m_system.html"><i class="icon-font">&#xe046;</i>权限管理</a></li>#}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% block mainbody %}
+
+    {% endblock %}
+    <!--/main-->
+</div>
+</body>

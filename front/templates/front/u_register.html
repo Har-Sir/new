@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css-front/login.css' %}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<div class="container">
+    <form class="form-horizontal lgform" method="post" id="rgfrom" action="u_register">
+        {% csrf_token %}
+        <div class="form-group" align="center">
+            <h3>新用户注册</h3>
+        </div>
+        <div class="form-group">
+            <h5>手机号码</h5>
+                <input type="text" name="rgphone" id="rgphone" class="form-control lg-rg-input">
+             <h5>名字</h5>
+                <input type="text" name="rgname" id="rgname" class="form-control lg-rg-input">
+            <h5>密码</h5>
+            <input type="password" name="password" id="password" class="form-control lg-rg-input">
+            <h5>确认密码</h5>
+            <input type="password" name="password" id="pwd" class="form-control lg-rg-input">
+        </div>
+        <div class="form-group">
+            <input type="submit" id="btn" class="btn btn-primary btn-block btn-lg" value="注册">
+        </div>
+    </form>
+</div>
+</body>
+</html>
+<body>

@@ -1,0 +1,20 @@
+ .lgform {
+    border: solid #337ab7; /*边框实线，颜色*/
+    /*background-color: honeydew;*/
+    max-width: 380px;
+    padding: 20px 40px 20px 40px;
+    margin: 13% auto;
+    border-radius: 25px; /*添加圆角边框*/
+}
+.lg-rg-input{     /*输入框样式*/
+    height: 40px;
+}
+ #herf-left{     /*链接样式*/
+    font-size: 16px;
+    float: left;
+}
+ #herf-right{     /*链接样式*/
+     font-size: 16px;
+     float: right;
+}
+
