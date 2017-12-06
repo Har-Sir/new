@@ -3,7 +3,7 @@
 ### 1.系统运用的工具
 - 开发工具：Pycharm
 - 开发语言：Python 2.7.13
-- 框架：Django 1.10.1   Bootstrap 3.7
+- 框架：Django 1.10.1   Bootstrap 3.3.7   
 - 数据库：Mysql 5.5.47
 
 
