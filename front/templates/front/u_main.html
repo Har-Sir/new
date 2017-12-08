@@ -1,5 +1,8 @@
 {% extends 'u_base.html' %}
 {% load static %}
+{% block title %}
+    <title>首页</title>
+    {% endblock %}
 {% block mainbody %}
 
     <div class="row">
@@ -10,12 +13,12 @@
                 </div>
                 <div class="panel-body">
                     <td class="form-group">
-                    <h5>起始城市</h5>
-                    <input type="text" name="startcity" id="startcity" class="form-control first-input" placeholder="起始城市">
-                    <h5>目的城市</h5>
-                    <input type="text" name="arrcity" id="arrcity" class="form-control first-input" placeholder="目的城市">
-                    <h5>时间</h5>
-                    <input type="text" name="time" id="time" class="form-control first-inpu" placeholder="时间">
+                    <h5>起点</h5>
+                    <input type="text" name="startcity" id="startcity" class="form-control first-input" >
+                    <h5>终点</h5>
+                    <input type="text" name="arrcity" id="arrcity" class="form-control first-input">
+                    <h5>发车日期</h5>
+                    <input type="date" name="time" id="time" class="form-control first-input" placeholder="时间">
                 <br>
                 <div class="form-group">
                     <input type="submit" id="btn" class="btn btn-primary btn-block btn-md" value="查询">
@@ -42,22 +45,11 @@
 		    <div class="item">
 			    <img src="{% static 'images/login.jpg' %}" alt="Third slide">
 		    </div>
+            <!-- 轮播（Carousel）导航 -->
+	    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 	    </div>
-{#	    <!-- 轮播（Carousel）导航 -->#}
-{#	    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>#}
-{#	    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>#}
     </div>
-
-{#          <div class="col-md-6 wrap">#}
-{#              <div class="panel panel-default">#}
-{#        <div class="panel-heading ">#}
-{#            <h3 class="panel-title">公告栏</h3>#}
-{#        </div>#}
-{#              <div class="panel-body info">#}
-{#              通知通知#}
-{#        </div>#}
-{#          </div>#}
-{#    </div>#}
 
     <div class="col-md-3 wrap">
         <div class="panel panel-default">
@@ -70,42 +62,46 @@
           </div>
     </div>
  </div>
+<div class="panel panel-default" style="height: 150px">
+  hhh
+</div>
 
-  <div class="panel panel-default">
-        <div class="panel-heading ">
-            <h3 class="panel-title" style="text-align:left">热门路线</h3>
-        </div>
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--珠海北岭</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--珠海北岭</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-                <div class="col-md-3 wrap">
-                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>
-                </div>
-            </div>
-        </div>
-  </div>
+{#  <div class="panel panel-default">#}
+{#        <div class="panel-heading ">#}
+{#            <h3 class="panel-title" style="text-align:left">热门路线</h3>#}
+{#        </div>#}
+{#        <div class="panel-body">#}
+{#            <div class="row">#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--珠海北岭</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--珠海北岭</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#                <div class="col-md-3 wrap">#}
+{#                    <a href="#" name="login"><h5>广州商学院--佛山三乡</h5></a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#  </div>#}
+
 
 {% endblock %}
 

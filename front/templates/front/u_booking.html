@@ -1,5 +1,82 @@
 {% extends 'u_base.html' %}
 {% load static %}
+{% block title %}
+    <title>在线订票</title>
+    {% endblock %}
 {% block mainbody %}
-    <h1>在线订票</h1>
+    <div class="row">
+    <div class="col-md-9 wrap">
+        {% block booking %}
+                <form action="#" method="post" action="u_booking">
+                    <table>
+                        <td>
+                            <th>起点:</th>
+                            <td><input class="form-control first-input" type="text" style="width: 130px"></td>
+                        </td>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;终点:</th>
+                        <td>
+                            <td><input class="form-control first-input" type="text" style="width: 130px"></td>
+                        </td>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发车日期:</th>
+                        <td><input class="form-control first-input" type="date"></td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="btn btn-primary btn2" name="sub" value="查询" type="submit">
+                        </td>
+                        <td >
+                            &nbsp;&nbsp;&nbsp;
+                        <input class="btn btn-primary btn2" name="sub" value="清除" type="reset">
+                        </td>
+                        </th>
+                        </tr>
+                    </table>
+                </form>
+        <hr>
+        <table class="table table-striped table-hover">
+        <tbody align="center">
+  <thead>
+    <tr>
+      <th>车次</th>
+      <th>方向</th>
+      <th>发车日期</th>
+      <th>发车时间</th>
+      <th>到达时间</th>
+      <th>起点</th>
+      <th>终点</th>
+      <th>票价（元）</th>
+      <th>订票</th>
+    </tr>
+  </thead>
+
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+        <td><input class="btn btn-primary btn-xs" name="booking" value="订票" type="submit" onclick="window.location.href='u_buy.html'"></td>
+    </tr>
+  </tbody>
+</table>
+
+            {% endblock %}
+    </div>
+     <div class="col-md-3 wrap">
+        <div class="panel panel-default">
+            <div class="panel-heading ">
+                <h3 class="panel-title">帮助指南</h3>
+            </div>
+            <div class="panel-body info">
+                xxxx
+            </div>
+          </div>
+    </div>
+
+    </div>
  {% endblock %}

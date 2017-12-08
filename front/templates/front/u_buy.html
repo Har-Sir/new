@@ -1,0 +1,79 @@
+{% extends 'u_base.html' %}
+{% load static %}
+{% block title %}
+    <title>购票</title>
+    {% endblock %}
+{% block mainbody %}
+    <div class="row">
+        <div class="col-md-9 wrap">
+            <caption><h4>乘客信息</h4></caption>
+            <hr>
+            <div align="center">
+                <table class="table table-bordered" style="width: 600px;">
+                    <tbody align="center">
+                        <tr>
+                            <td class="active" style="width: 100px">姓名</td>
+                            <td style="width: 150px"></td>
+                            <td class="active" style="width: 100px">号码</td>
+                            <td style="width: 150px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+            <caption><h4>所购买的车票信息</h4></caption>
+            <hr>
+            <div align="center">
+                <table class="table table-bordered" style="width: 600px;">
+                    <tbody align="center">
+                        <tr>
+                            <td class="active" style="width: 100px">发车日期</td>
+                            <td style="width: 150px"></td>
+                            <td class="active" style="width: 100px">发车时间</td>
+                            <td style="width: 150px"></td>
+                        </tr>
+                        <tr>
+                            <td class="active" style="width: 100px">出发站</td>
+                            <td style="width: 150px"></td>
+                            <td class="active" style="width: 100px">到达站</td>
+                            <td style="width: 150px"></td>
+                        </tr>
+                        <tr>
+                            <td class="active" style="width: 100px">票价</td>
+                            <td style="width: 150px"></td>
+                            <td class="active" style="width: 100px">车次</td>
+                            <td style="width: 150px"></td>
+                        </tr>
+                        <tr>
+                            <td class="active" style="width: 100px">付款总额</td>
+                            <td style="width: 150px"></td>
+                            <td class="active" style="width: 100px">票数</td>
+                            <td style="width: 150px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+
+            <div align="center">
+                <td>
+                    <input class="btn btn-primary" value="提交" type="submit">
+                    <input class="btn btn-primary" onclick="history.go(-1)" value="返回" type="button">
+                </td>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 wrap">
+            <div class="panel panel-default">
+                <div class="panel-heading ">
+                    <h3 class="panel-title">帮助指南</h3>
+                </div>
+                <div class="panel-body info">
+                    xxxx
+                </div>
+            </div>
+        </div>
+    </div>
+ {% endblock %}
