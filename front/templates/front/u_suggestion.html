@@ -1,5 +1,33 @@
 {% extends 'u_base.html' %}
 {% load static %}
+{% block title %}
+    <title>意见反馈</title>
+    {% endblock %}
 {% block mainbody %}
-    <h1>投诉建议</h1>
+    <div class="row">
+        <div class="col-md-3 wrap">
+            <div class="panel panel-default">
+                <div class="panel-heading ">
+                    <h3 class="panel-title">预售车次</h3>
+                </div>
+                <div class="panel-body">
+                    <td class="form-group">
+                    <h5>起点</h5>
+                    <input type="text" name="startcity" id="startcity" class="form-control first-input" >
+                    <h5>终点</h5>
+                    <input type="text" name="arrcity" id="arrcity" class="form-control first-input">
+                    <h5>发车日期</h5>
+                    <input type="date" name="time" id="time" class="form-control first-input" placeholder="时间">
+                <br>
+                <div class="form-group">
+                    <input type="submit" id="btn" class="btn btn-primary btn-block btn-md" value="查询">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-9 wrap">
+
+    </div>
+    </div>
  {% endblock %}

@@ -17,8 +17,8 @@ class manager(models.Model):
     # class Meta:
     #     db_table = "manager"
     class Meta:
-        verbose_name = '管理员信息'
-        verbose_name_plural = '管理员信息'
+        verbose_name = 'manager'
+        verbose_name_plural = 'manager(管理员信息)'
 
 #用户表
 class user(models.Model):
@@ -32,8 +32,8 @@ class user(models.Model):
     # def __str__(self):
     #     return self.name
     class Meta:
-        verbose_name = '用户信息'
-        verbose_name_plural = '用户信息'
+        verbose_name = 'user'
+        verbose_name_plural = 'user(用户信息)'
 
 
 #车次表
@@ -48,8 +48,8 @@ class train(models.Model):
     T_yp = models.IntegerField('余票')
     T_car = models.CharField('车牌号', max_length=20)
     class Meta:
-        verbose_name = '车次信息'
-        verbose_name_plural = '车次信息'
+        verbose_name = 'train'
+        verbose_name_plural = 'train(车次信息)'
 
 #路线
 class route(models.Model):
@@ -59,8 +59,8 @@ class route(models.Model):
     R_startplace = models.CharField('上车点',max_length=50)
     R_arrtplace = models.CharField('下车点',max_length=50)
     class Meta:
-        verbose_name = '路线信息'
-        verbose_name_plural = '路线信息'
+        verbose_name = 'route'
+        verbose_name_plural = 'route(路线信息)'
 
 #订单
 class order(models.Model):
@@ -74,8 +74,8 @@ class order(models.Model):
     O_paymode = models.CharField('付款方式',max_length=20)
     O_ordertime = models.DateTimeField('下单时间',max_length=50)
     class Meta:
-        verbose_name = '订单信息'
-        verbose_name_plural = '订单信息'
+        verbose_name = 'order'
+        verbose_name_plural = 'order(订单信息)'
 
 #意见反馈
 class suggestion(models.Model):
@@ -84,8 +84,8 @@ class suggestion(models.Model):
     SU_time = models.DateTimeField('反馈时间',max_length=50)
     SU_content = models.CharField('内容',max_length=150)
     class Meta:
-        verbose_name = '意见反馈'
-        verbose_name_plural = '意见反馈'
+        verbose_name = 'suggestion'
+        verbose_name_plural = 'suggestion(意见反馈)'
 
 #车讯
 class inform(models.Model):
@@ -93,13 +93,13 @@ class inform(models.Model):
     T_id = models.CharField('车次编号',max_length=20)
     I_content = models.CharField('内容',max_length=150)
     class Meta:
-        verbose_name = '车讯信息'
-        verbose_name_plural = '车讯信息'
+        verbose_name = 'inform'
+        verbose_name_plural = 'inform(车讯信息)'
 
 #帮助信息
 class help(models.Model):
     H_id = models.AutoField('车讯id',primary_key=True)
     H_content = models.CharField('内容',max_length=150)
     class Meta:
-        verbose_name = '车讯信息'
-        verbose_name_plural = '车讯信息'
+        verbose_name = 'help'
+        verbose_name_plural = 'help(帮助信息)'
